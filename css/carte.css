@@ -1,0 +1,133 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BASE ========== */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f2e6d9;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ========== NAVBAR ========== */
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: #f2e6d9;
+  font-size: 1rem;
+}
+
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1F4C3C;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+}
+
+nav a.active {
+  background-color: #d2c2a3; /* beige foncé */
+}
+
+/* ========== HERO ========== */
+.hero {
+  text-align: center;
+  padding: 4rem 5% 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-top: -3rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #004d40;
+  font-family: 'Georgia', serif;
+}
+
+.hero img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== LONG SINGLE CARTE ========== */
+.carte-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #FCE3B5;
+  padding: 3rem;
+  border: 1px solid #e0dcd6;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.carte-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #004d40;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: 0.5rem;
+}
+
+.carte-container h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #004d40;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.carte-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.carte-container li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.carte-container li strong {
+  color: #00695c;
+}
+
+.signature {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: #777;
+}
