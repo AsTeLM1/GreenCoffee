@@ -347,6 +347,11 @@ footer{
   padding: 1rem;
 }
 
+.nav-links a {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
+
   nav ul {
     flex-direction: row;
     gap: 1rem;
