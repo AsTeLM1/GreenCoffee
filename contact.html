@@ -7,11 +7,16 @@
   <link rel="stylesheet" href="css/contact.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-      <link rel="icon" type="image/png" href="images/home_images/cup_cartoon_copie.png">
+    <link rel="icon" type="image/png" href="images/home_images/cup_cartoon_copie.png">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">GreenCoffee</div>
+    <button class="menuPhone" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="carte.html">Carte</a>
@@ -45,5 +50,14 @@
       </div>
     </section>
   </main>
+
+  <script>
+  const burger = document.querySelector('.menuPhone');
+  const navLinks = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>

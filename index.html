@@ -14,6 +14,11 @@
 <body>
   <header class="navbar">
     <div class="logo">GreenCoffee</div>
+    <button class="menuPhone" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="nav-links">
       <a href="#" class="active">Home</a>
       <a href="carte.html">Carte</a>
@@ -23,15 +28,14 @@
 
   <main class="hero">
     <p class="subheading">Envie d'un café ?</p>
-    <h1>le matin avant le taff<br> ou le midi avec tes potes?<br></h1>
+    <h1>Le matin avant le taff<br> ou le midi avec tes potes?<br></h1>
     <h2>Green coffee c'est pour tout le monde toute la journée</h2>
       <img src="images/home_images/cup_cartoon_copie.png" alt="coffee cup">
   </main>
 
   <section class="midSection">
-    <h2>Green Coffee, C'est une envie de façonner un concept de A à Z venue de Emilie et Denis. Ils ont alors créé
-        un espace de temple dédié au café. installé dans un espace dont la hauteur des plafonds rappelle la maison de maitre 
-        et la vitrine façon accordéon.
+    <h2>
+      Green Coffee, c’est l’envie d’Émilie et Denis de créer un concept complet, pensé de A à Z. Ils ont imaginé un véritable temple du café, installé dans un lieu à la hauteur sous plafond majestueuse, rappelant les maisons de maître, avec une vitrine en accordéon qui attire le regard.
     </h2>
     <div class="midSection-buttons">
         <a href="contact.html" class="btn contact">Contactez-Nous</a>
@@ -42,7 +46,7 @@
   <section class="gallery">
     <img src="images/home_images/cafebeau.jpg" alt="">
     <img src="images/home_images/croque2.jpg" alt="">
-    <img src="images/home_images/assiette.jpg" alt="">
+    <img src="images/home_images/sandwish.jpg" alt="">
     <img src="images/home_images/gateau.jpg" alt="">
     <img src="images/home_images/glace.jpg" alt="">
     <img src="images/home_images/paintomate.jpg" alt="">
@@ -67,6 +71,15 @@
 <footer>
     <p>&copy; 2024 GreenCoffee</p>
 </footer>
+
+<script>
+  const burger = document.querySelector('.menuPhone');
+  const navLinks = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 
 
 </body>

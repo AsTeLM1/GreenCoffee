@@ -4,14 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GreenCoffee Carte</title>
-  <link rel="stylesheet" href="css/carte.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/carte.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/home_images/cup_cartoon_copie.png">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">GreenCoffee</div>
+    <button class="menuPhone" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="carte.html" class="active">Carte</a>
@@ -104,6 +111,13 @@
     </section>
   </main>
 
-  <script src="js/carte.js"></script>
+  <script>
+  const menuBtn = document.querySelector(".menuPhone");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
 </body>
 </html>

@@ -58,6 +58,8 @@ nav a.active {
   background-color: #d2c2a3; 
 }
 
+
+
 /* HERO SECTION */
 .hero {
   text-align: center;
@@ -81,7 +83,6 @@ nav a.active {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 0rem;
   max-width: 800px;
 }
 
@@ -91,6 +92,7 @@ nav a.active {
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  margin-bottom: 5em;
 }
 
 
@@ -267,6 +269,25 @@ footer{
     border-top: 0.5px solid #444;
 }
 
+.menuPhone {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.menuPhone span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #1F4C3C;
+  border-radius: 2px;
+}
+
 
 
 @media (max-width: 1299px) {
@@ -295,20 +316,36 @@ footer{
 /* Navbar (mobile) */
 @media (max-width: 500px) {
   header {
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
   }
 
-  .nav-links {
+  .menuPhone {
     display: flex;
-    flex-direction: column;  
-    align-items: flex-end;  
-    gap: 1rem;
-    margin-top: 1rem;
-    width: 100%;
   }
+
+.nav-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f2e6d9;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  display: flex;
+  z-index: 1000;
+}
+
+.nav-links.show {
+  max-height: 200px; /* ajustable selon le nombre de liens */
+  padding: 1rem;
+}
 
   nav ul {
     flex-direction: row;
@@ -341,6 +378,7 @@ footer{
   .hero img {
     width: 280px;
     height: auto;
+
   }
 
   /* MidSection */
